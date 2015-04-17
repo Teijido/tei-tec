@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <script type ="text/javascript" src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>Ejemplo de galeria</div>
+        <div id ="slider">
+            <div><img src="images/foto1.jpg"></div>
+            <div><img src="images/foto2.jpg"></div>
+            <div><img src="images/foto3.jpg"></div>
+        </div>
+        </div>
+        
+        <script type="text/javascript">
+            
+         $(function(){
+             $('#slider div:gt(0)').hide();
+             setImterval(funtion(){
+                 $('#slider div:first-childe').fadeout(1000)
+                         .next('div').fadein(1000)
+                         .end().appendto('#slider');
+             },3000);  
+         } 
+        </script>
+        
+    </body>
+</html>
