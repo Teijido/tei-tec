@@ -15,23 +15,23 @@ and open the template in the editor.
     <body>
         <div>Ejemplo de galeria</div>
         <div id ="slider">
-            <div><img src="images/foto1.jpg"></div>
-            <div><img src="images/foto2.jpg"></div>
-            <div><img src="images/foto3.jpg"></div>
+            <div><img style="height:300px;" src="images/img04.jpg"></div>
+            <div><img style="height:300px;" src="images/img05.jpg"></div>
+            <div><img style="height:300px;" src="images/img06.jpg"></div>
         </div>
         </div>
-        
+
         <script type="text/javascript">
-            
+
          $(function(){
              $('#slider div:gt(0)').hide();
-             setImterval(funtion(){
-                 $('#slider div:first-childe').fadeout(1000)
-                         .next('div').fadein(1000)
-                         .end().appendto('#slider');
-             },3000);  
-         } 
+             setInterval(function(){
+                 $('#slider div:first-child').fadeOut(1000)
+                         .next('div').fadeIn(1000)
+                         .end().appendTo('#slider');
+             },3000);
+         });
         </script>
-        
+
     </body>
 </html>
